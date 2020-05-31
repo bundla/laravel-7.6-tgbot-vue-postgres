@@ -1,0 +1,33 @@
+version: "1"
+title: "Laravel 7.6 + Telegram Bot SDK + Vue + PostgreSQL"
+description: "Laravel 7.6, PHP 7.2, Telegram Bot SDK, Nginx, PostgreSQL, Redis, Scheduler, Horizon, Vue, Vue Router, VueX, Font Awesome, normalize.css."
+repository-url: https://github.com/laravel/laravel.git
+repository-version: ^7.6.0
+docker-compose:
+  modules:
+    bundla/m-app-php-7.2: ^1.0
+    bundla/m-nginx-latest: ^1.0
+    bundla/m-postgres-12.3: ^1.0
+    bundla/m-redis-6.0: ^1.0
+    bundla/m-scheduler-php-7.2: ^1.0
+    bundla/m-horizon-php-7.2: ^1.0
+composer:
+  install: true
+  expansion: true
+  require:
+    laravel/horizon: ^4.3
+    irazasyed/telegram-bot-sdk: ^3.0
+npm:
+  install: true
+  expansion: true
+  dependencies:
+    font-awesome: ^4.7.*
+    normalize.css: ^8.0.*
+    vue: ^2.6.*
+    vue-router: ^3.1.*
+    vuex: ^3.1.*
+app-cmd-after:
+  - php artisan horizon:install
+  - php artisan config:cache
+  - php artisan horizon:publish
+  - php artisan vendor:publish --provider="Telegram\Bot\Laravel\TelegramServiceProvider"
