@@ -4,7 +4,7 @@ Bundle for the project [Bundla](https://github.com/tgaru/bundla).
 
 ## Specifications
 
-**Key name:** `bundla/laravel-7.6-tgbot-vue-postgres`
+**Bundle-key:** `bundla/laravel-7.6-tgbot-vue-postgres`
 
 **Bundle includes:**
 * [Laravel 7.6](https://github.com/laravel/laravel)
@@ -24,7 +24,7 @@ Bundle for the project [Bundla](https://github.com/tgaru/bundla).
 
 #### Installation from Laravel DSK
 ```
-make b=bundla/laravel-7.6-tgbot-vue-postgres
+bundla i bundla/laravel-7.6-tgbot-vue-postgres
 ````
 
 ## License
