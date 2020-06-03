@@ -22,7 +22,8 @@ Bundle for the project [Bundla](https://github.com/tgaru/bundla).
 * [Scheduler PHP 7.2 (module)](https://github.com/bundla/m-scheduler-php-7.2)
 * [Horizon PHP 7.2 (module)](https://github.com/bundla/m-horizon-php-7.2)
 
-#### Installation from Laravel DSK
+## Installation
+Install the Bundla console utility in accordance with the instructions on the site https://bundla.tech, create a new folder and write the command in it:
 ```
 bundla i bundla/laravel-7.6-tgbot-vue-postgres
 ````
